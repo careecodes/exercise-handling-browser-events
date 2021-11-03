@@ -7,9 +7,16 @@
 </head>
 <body>
   <!-- HTML goes here -->
+  <button id="myButton">Click Me</button>
 
   <script>
-    // JavaScript goes here
+    // Create a button that logs "Button Pressed" to the console when clicked.
+    const myButton = document.querySelector("#myButton");
+
+    myButton.addEventListener('click', function(){
+      console.log("Button clicked");
+    })
+
 
   </script>
 </body>
