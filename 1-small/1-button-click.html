@@ -7,15 +7,22 @@
 </head>
 <body>
   <!-- HTML goes here -->
-  <button id="myButton">Click Me</button>
+  <!-- <button onclick="buttonClick()">Click me</button> -->
+  <button class="button1">Click me</button>
 
   <script>
     // Create a button that logs "Button Pressed" to the console when clicked.
-    const myButton = document.querySelector("#myButton");
+    
+    // Select a button on the screen and wait for it to be clicked
+    // function buttonClick(){
+    //   console.log("button pressed");
+    // }
 
-    myButton.addEventListener('click', function(){
-      console.log("Button clicked");
+    const btn = document.querySelector(".button1");
+    btn.addEventListener("click", (e) => {
+      console.log("button clicked");
     })
+
 
 
   </script>
