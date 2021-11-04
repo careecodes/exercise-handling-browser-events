@@ -25,7 +25,38 @@
 
   <script>
     // JavaScript goes here
+
+    // Use input elements enter in new items for shopping list.
+    // Add a button to submit inputs and render the input values to the DOM.
+    // Add a button to the DOM for each new item in shopping list that can be used to remove the item.
     
+    // User types in new item in the input field
+    // User presses "add button"
+    // Item is added to list
+    // Delete button appears beside new items in the list
+
+    const form = document.getElementById("newItemForm");
+    const myParentList = document.getElementById("shoppingList");
+    const itemInput = document.querySelector("#item");
+    
+    form.addEventListener("submit", function(){
+      event.preventDefault();
+      console.log("you submitted your form");
+      const newListChild = document.createElement("li");
+      newListChild.innerText = itemInput.value;
+      // Create shopping list element
+      // <li>[User's input here]</li>
+      myParentList.appendChild(newListChild);
+
+    })
+
+
+
+
+    // Delete an item
+
+
+
   </script>
 </body>
 </html>

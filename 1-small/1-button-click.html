@@ -19,9 +19,14 @@
     // }
 
     const btn = document.querySelector(".button1");
-    btn.addEventListener("click", (e) => {
-      console.log("button clicked");
+
+    const myCustomEvent = new Event('customEvent', { detail: elem.dataset.time });
+    btn.addEventListener("customEvent", (e) => {
+      console.log(e);
+      console.log("you clicked the button at: " + e.detail);
     })
+
+    //btn.addEventListener('customEvent')
 
 
 
