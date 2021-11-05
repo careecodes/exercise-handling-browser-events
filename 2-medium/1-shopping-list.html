@@ -44,10 +44,20 @@
 
       // Build the new list item and its delete button
       const newListChild = document.createElement("li");
+
+      // Create a delete button
       const deleteBtn = document.createElement("button");
 
-      // Set button's text to "delete"
+      // Make the button say "Delete"
       deleteBtn.innerText = "delete";
+
+      // Append the delete button to the DOM
+      newListChild.appendChild(deleteBtn);
+
+      deleteBtn.addEventListener("click",function(){
+        // When the button is clicked, delete the list item
+        newListChild.remove();
+      })
       
       // Set newListChild text to input value
       newListChild.innerText = itemInput.value;
@@ -61,3 +71,4 @@
   </script>
 </body>
 </html>
+
