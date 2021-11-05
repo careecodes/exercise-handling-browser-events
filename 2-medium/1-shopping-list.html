@@ -16,18 +16,6 @@
     <li>Eggs</li>
   </ul>
 
-  <!-- Create a button element -->
-  <!-- use the createElement(); to create a button element -->
-
-  <!-- Append the button element to the li -->
-  <!-- use appendChild() to append a button to the li -->
-
-  <!-- Add a click event listener to the button -->
-  <!-- addEventListener() -->
-
-  <!-- When the button is clicked, delete the item that the button is associated with -->
-
-
   <form id="newItemForm">
     <label for="item">Add New Item</label>
     <br>
@@ -54,22 +42,11 @@
     form.addEventListener("submit", function(){
       event.preventDefault();
 
-  // <!-- Create a button element -->
-  // <!-- use the createElement(); to create a button element -->
-
-  // <!-- Append the button element to the li -->
-  // <!-- use appendChild() to append a button to the li -->
-
-  // <!-- Add a click event listener to the button -->
-  // <!-- addEventListener() -->
-
-  // <!-- When the button is clicked, delete the item that the button is associated with -->
-
       // Build the new list item and its delete button
       const newListChild = document.createElement("li");
+      const deleteBtn = document.createElement("button");
 
-      //Build the delete button 
-      let deleteBtn = document.createElement("button");
+      // Set button's text to "delete"
       deleteBtn.innerText = "delete";
       
       // Set newListChild text to input value
@@ -80,13 +57,6 @@
       myParentList.appendChild(newListChild);
 
     })
-
-
-
-
-    // Delete an item
-
-
 
   </script>
 </body>
