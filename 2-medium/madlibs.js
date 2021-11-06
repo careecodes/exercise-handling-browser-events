@@ -1,7 +1,3 @@
-
-// I want to be able to put "dog" in the input field and have my story appear
-// after I press the submit button with "dog" in the animal blank.
-
 // Make a variable for the animal
 const animalSpan = document.querySelector(".animal");
 const animalInput = document.querySelector("#animal");
