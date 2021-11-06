@@ -2,6 +2,7 @@
 const animalSpan = document.querySelector(".animal");
 const countrySpan = document.querySelector(".country");
 const pluralNounSpan = document.querySelector(".pluralNoun");
+const foodSpan = document.querySelector(".food");
 
 const form = document.getElementById("madLibForm");
 const story = document.getElementById("madLibStory");
@@ -15,11 +16,13 @@ form.addEventListener("submit",function(event){
     let animalInput = document.querySelector("#animal").value;
     let countryInput = document.querySelector("#country").value;
     let pluralNounInput = document.querySelector("#pluralNoun").value;
+    let foodInput = document.querySelector("#food").value;
     
     // Set inner text of span to input value
     animalSpan.innerText = animalInput;
     countrySpan.innerText = countryInput;
     pluralNounSpan.innerText = pluralNounInput;
+    foodSpan.innerText = foodInput;
 
     // display the whole story
     story.style.display = "block";
