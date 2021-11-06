@@ -36,16 +36,21 @@ form.addEventListener("submit",function(event){
 
     // Loop through countrySpan
     for(let count = 0; count < countrySpan.length; count++){
-        console.log(countrySpan[count]);
         // Put the country input into all spans with class of country
         countrySpan[count].innerText = countryInput;
     }
 
     // Loop through deviceSpan
-    
+    for(let count = 0; count < deviceSpan.length; count++){
+        // Put the device input into all spans with class of device
+        deviceSpan[count].innerText = deviceInput;
+    }
 
     // Loop through adjectiveSpan
-
+    for(let count = 0; count < adjectiveSpan.length; count++){
+        // Put the adjective input into all spans with class of adjective
+        adjectiveSpan[count].innerText = adjectiveSpan;
+    }
 
     // Display the whole story
     story.style.display = "block";
