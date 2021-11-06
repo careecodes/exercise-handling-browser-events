@@ -1,11 +1,11 @@
 // Variables for span elements
 const animalSpan = document.querySelector(".animal");
-const countrySpan = document.querySelector(".country");
+const countrySpan = document.querySelectorAll(".country");
 const pluralNounSpan = document.querySelector(".pluralNoun");
 const foodSpan = document.querySelector(".food");
-const deviceSpan = document.querySelector(".device");
+const deviceSpan = document.querySelectorAll(".device");
 const nounSpan = document.querySelector(".noun");
-const adjectiveSpan = document.querySelector(".adjective");
+const adjectiveSpan = document.querySelectorAll(".adjective");
 
 // Form and story elements in UI
 const form = document.getElementById("madLibForm");
@@ -26,18 +26,26 @@ form.addEventListener("submit",function(event){
     
     // Set inner text of span to input value
     animalSpan.innerText = animalInput;
-    //countrySpan.innerText = countryInput;
+    // countrySpan.innerText = countryInput;
     pluralNounSpan.innerText = pluralNounInput;
     foodSpan.innerText = foodInput;
     deviceSpan.innerText = deviceInput;
     nounSpan.innerText = nounInput;
     adjectiveSpan.innerText = adjectiveInput;
 
-    // This can be optimized further with array method
-    const countryList = document.querySelectorAll(".country");
-    for(i=0; i<countryList.length; i++){
-        countryList[i].innerText = countryInput;
+
+    // Loop through countrySpan
+    for(let count = 0; count < countrySpan.length; count++){
+        console.log(countrySpan[count]);
+        // Put the country input into all spans with class of country
+        countrySpan[count].innerText = countryInput;
     }
+
+    // Loop through deviceSpan
+
+
+    // Loop through adjectiveSpan
+
 
     // Display the whole story
     story.style.display = "block";
