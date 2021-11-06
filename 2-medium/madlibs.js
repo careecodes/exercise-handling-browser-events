@@ -7,9 +7,9 @@ const deviceSpan = document.querySelector(".device");
 const nounSpan = document.querySelector(".noun");
 const adjectiveSpan = document.querySelector(".adjective");
 
+// Form and story elements in UI
 const form = document.getElementById("madLibForm");
 const story = document.getElementById("madLibStory");
-
 
 // Submit form
 form.addEventListener("submit",function(event){
@@ -33,13 +33,12 @@ form.addEventListener("submit",function(event){
     nounSpan.innerText = nounInput;
     adjectiveSpan.innerText = adjectiveInput;
 
+    // This can be optimized further with array method
     const countryList = document.querySelectorAll(".country");
     for(i=0; i<countryList.length; i++){
-        console.log(countryList[i]);
         countryList[i].innerText = countryInput;
     }
 
-
-    // display the whole story
+    // Display the whole story
     story.style.display = "block";
 })
