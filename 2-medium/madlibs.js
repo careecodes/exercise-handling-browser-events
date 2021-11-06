@@ -26,12 +26,19 @@ form.addEventListener("submit",function(event){
     
     // Set inner text of span to input value
     animalSpan.innerText = animalInput;
-    countrySpan.innerText = countryInput;
+    //countrySpan.innerText = countryInput;
     pluralNounSpan.innerText = pluralNounInput;
     foodSpan.innerText = foodInput;
     deviceSpan.innerText = deviceInput;
     nounSpan.innerText = nounInput;
     adjectiveSpan.innerText = adjectiveInput;
+
+    const countryList = document.querySelectorAll(".country");
+    for(i=0; i<countryList.length; i++){
+        console.log(countryList[i]);
+        countryList[i].innerText = countryInput;
+    }
+
 
     // display the whole story
     story.style.display = "block";
