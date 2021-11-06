@@ -1,26 +1,25 @@
-// Make a variable for the animal
+// Variables for span elements
 const animalSpan = document.querySelector(".animal");
-const animalInput = document.querySelector("#animal");
-
-// Country
 const countrySpan = document.querySelector(".country");
+const pluralNounSpan = document.querySelector(".pluralNoun");
 
 const form = document.getElementById("madLibForm");
-let story = document.getElementById("madLibStory");
+const story = document.getElementById("madLibStory");
 
 
 // Submit form
 form.addEventListener("submit",function(event){
-    let countryInput = document.getElementById("country").value;
-    console.log(countryInput);
-
     event.preventDefault();
+
+    // Input variables
+    let animalInput = document.querySelector("#animal").value;
+    let countryInput = document.querySelector("#country").value;
+    let pluralNounInput = document.querySelector("#pluralNoun").value;
     
     // Set inner text of span to input value
-    animalSpan.innerText = animalInput.value;
-
-    // Set inner text of country to the input value
+    animalSpan.innerText = animalInput;
     countrySpan.innerText = countryInput;
+    pluralNounSpan.innerText = pluralNounInput;
 
     // display the whole story
     story.style.display = "block";
