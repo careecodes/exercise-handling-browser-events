@@ -42,7 +42,7 @@ form.addEventListener("submit",function(event){
     }
 
     // Loop through deviceSpan
-
+    
 
     // Loop through adjectiveSpan
 
